@@ -7,14 +7,15 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
 class DemoAdapter(
-    private val listener: OnItemClickListener
+    private val listener: OnItemClickListener,
+    private val name: String
 ): ListAdapter<Data, DemoViewHolder>(diff) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DemoViewHolder {
         return DemoViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.viewholder_demo, parent, false))
     }
 
     override fun onBindViewHolder(holder: DemoViewHolder, position: Int) {
-        holder.bind(currentList[position], position)
+        holder.bind(currentList[position], name)
         holder.itemView.setOnClickListener {
             listener.onItemClick(holder)
         }

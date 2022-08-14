@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private val adapterA = DemoAdapter(listener)
-    private val adapterB = DemoAdapter(listener)
+    private val adapterA = DemoAdapter(listener, "A")
+    private val adapterB = DemoAdapter(listener, "B")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -11,7 +11,7 @@ class DemoViewHolder(
 
     private val textView = itemView.findViewById<TextView>(R.id.text_view)
 
-    fun bind(data: Data, pos: Int) {
-        textView.text = "data: ${data.text}, \nadapterPosition: $bindingAdapterPosition, \nlayoutPosition: $layoutPosition, \nAbsoluteAdapterPosition: $absoluteAdapterPosition"
+    fun bind(data: Data, name: String) {
+        textView.text = "data: $name ${data.text}, \nadapterPosition: $bindingAdapterPosition, \nlayoutPosition: $layoutPosition, \nAbsoluteAdapterPosition: $absoluteAdapterPosition"
     }
 }
