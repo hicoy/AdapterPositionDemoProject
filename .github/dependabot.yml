@@ -8,28 +8,3 @@ updates:
         day: monday
       allow:
         - dependency-type: all
-    - package-ecosystem: npm
-      directory: /
-      schedule:
-        interval: weekly
-        time: "03:00"
-        day: tuesday
-      open-pull-requests-limit: 0
-      allow:
-        - dependency-type: all
-    - package-ecosystem: pip
-      directory: /
-      schedule:
-        interval: weekly
-        time: "09:00"
-        day: thursday
-      allow:
-        - dependency-type: all
-    - package-ecosystem: github-actions
-      directory: /
-      schedule:
-        interval: weekly
-        time: "21:00"
-        day: friday
-      allow:
-        - dependency-type: all
