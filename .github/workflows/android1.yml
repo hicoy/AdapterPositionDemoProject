@@ -17,6 +17,10 @@ jobs:
       uses: hicoy/hello-world-composite-action@v1
       with:
         who-to-greet: 'Mona the Octocat'
+    - run: echo random-number "$RANDOM_NUMBER"
+      shell: bash
+      env:
+        RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
